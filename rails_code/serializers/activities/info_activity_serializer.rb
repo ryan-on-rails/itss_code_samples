@@ -1,0 +1,2 @@
+class InfoActivitySerializer < ActivitySerializer
+end

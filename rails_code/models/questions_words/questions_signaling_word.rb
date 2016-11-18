@@ -1,0 +1,2 @@
+class QuestionsSignalingWord < QuestionsWord
+end

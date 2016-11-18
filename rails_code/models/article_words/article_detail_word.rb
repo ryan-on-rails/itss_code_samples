@@ -1,0 +1,2 @@
+class ArticleDetailWord < ArticleWord
+end

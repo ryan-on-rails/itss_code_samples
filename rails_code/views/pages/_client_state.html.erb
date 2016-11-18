@@ -1,0 +1,12 @@
+<script type="text/javascript">
+  var ENVIRONMENT = "<%= env %>";
+  var ENV = (function() {
+    return {
+      production: ENVIRONMENT === 'production',
+      development: ENVIRONMENT === 'development'
+    };
+  })();
+
+  var CLIENT_STATE = <%= raw(state) %>;
+  var REDIRECT = '<%= @redirect %>';
+</script>

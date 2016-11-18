@@ -1,0 +1,122 @@
+/*
+@name layout
+@description General application globals/layout.
+-----------------------------------------------------*/
+
+* {
+  font-family: $ff-sans-serif;
+}
+
+html {
+  font-size: 16px; // REM
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+.modal.fade.in {
+  background-color: rgba(0,0,0,0.7);
+  display: block;
+}
+
+.modal-dialog {
+  margin-top: 10%;
+}
+
+.main-nav {
+  font-size: 1rem;
+  z-index: 10000000;
+}
+
+.user-dropdown-link {
+  font-size: 22px;
+}
+
+// Loading
+// ------------------------------------
+.act-loading-overlay {
+  background-color: rgba(255,255,255,0.9);
+  bottom: 0; left: 0; right: 0; top: 0px;
+  position: fixed;
+  height: 100%;
+  z-index: $z-max;
+}
+
+.itss-loading {
+  animation: spin 2s infinite linear;
+  border: 10px solid transparent;
+  border-bottom-color: #ddd;
+  border-top-color: #ddd;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 150px;
+  position: relative;
+  @include size(200px);
+}
+
+.itss-loading__inner {
+  animation: reverse-spin 2s infinite linear;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  @include size(180px);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes reverse-spin {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+// ------------------------------------
+.language-selector-container{
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    display: block;
+    width: auto;
+    z-index: 1000000000;
+  .language-selector > li {
+
+    > a {
+      color: rgb(128,173,179) !important;
+      background-color: transparent;
+      border: none;
+      &:hover {
+        color: darken(white, 10%) !important;
+        background-color: transparent;
+        border: none;
+      }
+      &.active {
+        color: lighten(rgb(128,173,179), 10%) !important;
+      }
+      &.disabled {
+        display: none;
+      }
+      &.not-selected {
+        color: rgb(128,173,179) !important;
+
+        &:hover {
+          color: lighten(rgb(128,173,179), 10%) !important;
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------------
+// TODO: Review
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 22px;
+  }
+
+  html.dashboard {
+    font-size: 16px;
+  }
+}

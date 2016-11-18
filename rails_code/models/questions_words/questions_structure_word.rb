@@ -1,0 +1,2 @@
+class QuestionsStructureWord < QuestionsWord
+end

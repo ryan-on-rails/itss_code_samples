@@ -1,0 +1,2 @@
+class ArticleSignalingWord < ArticleWord
+end

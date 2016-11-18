@@ -1,0 +1,615 @@
+/*
+@name activity
+@description Styles pertaining to the student activity UI.
+-----------------------------------------------------*/
+
+$bottom-bar-height: 50px;
+
+// Full-width info activities
+.act-workspace--info {
+  .act-panel__divider {
+    display: none;
+  }
+
+  .act-panel--mid {
+    .act-panel__inner {
+      // If we want to support cutting the content
+      // short of the submit button, we can do it
+      // with this...
+      /// height: 80%;
+      padding-right: 20px;
+      padding-bottom: 75px;
+
+      // &::-webkit-scrollbar {
+      //   width: 0;
+      // }
+    }
+  }
+
+  .act-panel--right {
+    .act-response__submit-btn {
+      visibility: visible;
+     }
+
+    *:not(.act-response__submit-btn) {
+      visibility: hidden;
+    }
+  }
+}
+
+.act-workspace--full {
+  .act-response{
+    max-width: 1024px;
+  }
+  button.act-response__submit-btn {
+    width: 50%;
+    left: auto;
+    right: 0;
+  }
+}
+
+.act-workspace__area {
+  background: #f8f8f8;
+  bottom: 0; top: $navbar-height;
+  position: absolute;
+}
+
+.act-workspace__area--left {
+  left: 0;
+  right: 80%;
+
+  .act-panel {
+    bottom: 0;
+  }
+}
+
+.act-workspace__area--right {
+  left: 20%;
+  right: 0;
+
+  .act-panel {
+    bottom: $bottom-bar-height;
+  }
+}
+
+.act-panel {
+  position: absolute;
+  top: 0;
+}
+
+.act-panel--left {
+  width: 100%;
+}
+
+.act-panel--left .act-panel__inner {
+  background: $c-blackish;
+
+  p, span {
+    color: white;
+  }
+}
+
+.act-panel--mid {
+  left: 0; right: 50%;
+  padding-right: 15px;
+  .act-panel__inner {
+    background: #f8f8f8;
+    overflow-y: auto;
+  }
+}
+
+.act-panel--right {
+  left: 0; right: 0;
+
+  .act-panel__inner {
+    background: #e3edef;
+  }
+}
+.act-workspace--info{
+  .act-panel--right {
+    position: initial;
+    .act-panel__inner{
+      position: initial;
+      .act-response__submit-btn{
+        width: 45%;
+        left: 50%;
+        bottom: 70px;
+      }
+    }
+  }
+}
+
+.act-panel__inner {
+  padding: 20px;
+  position: relative;
+  @include size(100%);
+}
+
+.act-it {
+  margin:auto;
+  max-width: 225px;
+  background-color: white;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #ccc;
+  margin-bottom: 15px;
+  position: relative;
+  @include size(100% 35%);
+
+  canvas {
+    @include size(100%);
+  }
+}
+
+.act-it__play {
+  background-color: $c-gold;
+  bottom: 5%; left: 5%;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  color: $c-black;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.6rem;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90%;
+  @include glisten();
+
+  &:hover,
+  &:focus {
+    background-color: darken($c-gold, 5%);
+    color: $c-black;
+    text-decoration: none;
+  }
+}
+
+.act-panel__divider {
+  background: #ccc;
+  bottom: 0; right: 0; top: 0;
+  position: absolute;
+  width: 15px;
+
+  &:hover {
+    /* Use if resizing is enabled. */
+    /*cursor: ew-resize;*/
+  }
+}
+
+.act-instruction__text {
+  font-size: 1.1rem;
+}
+
+.act-instruction__btns {
+  position: absolute;
+  bottom: 20px; left: 0; right: 20px;
+  button {
+    margin: 5px 0px;
+  }
+}
+.act-key-btn,
+.act-review-btn,
+.act-review-matrix-btn{
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  left: 0;
+  position:relative;
+  float: left;
+  @include size(65px 55px);
+
+  &:after {
+    font-size: 1rem;
+    font-weight: bold;
+    left: 80px;
+    width: 200px;
+    letter-spacing: 0.75px;
+    text-align: left;
+    position: absolute;
+    bottom: -5px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+  }
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: #444;
+    cursor: pointer;
+  }
+}
+
+.act-key-btn {
+  background: #505050 url('/media/other/key-2x.png') no-repeat 50%;
+  background-size: 35px;
+
+  &:after {
+    color: $c-gold;
+    content: 'See your key.';
+  }
+}
+.act-review-btn {
+  background: #505050 url('/media/other/instructions-2x.png') no-repeat 50%;
+  background-size: 35px;
+  color: $c-orange;
+  clear: left;
+
+  &:after {
+    color: $c-orange;
+    line-height: 1.25;
+    width: 10rem;
+    content: 'Review your instructions.';
+  }
+}
+
+.act-bottom-bar {
+  background: $c-gold;
+  bottom: 0; left: 0; right: 0;
+  height: $bottom-bar-height;
+  padding: 0 15px;
+  position: absolute;
+
+  > * {
+    line-height: $bottom-bar-height;
+  }
+}
+
+.act-response__submit-btn {
+  bottom: 0;
+  position: absolute;
+}
+
+.act-response {
+  height: 100%;
+  position: relative;
+  margin-right: 10%;
+}
+
+.act-response__submission {
+  height: 85%;
+  overflow-y: auto;
+
+  // &::-webkit-scrollbar {
+  //   width: 0;
+  // }
+  .modal{
+    background: rgba(0,0,0,0.5);
+    .modal-warning{
+      .modal-header{
+        background-color: $c-red-orange;
+        border-color: darken($c-red-orange, 10%);
+        color: #FFF;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        .close{
+          color: #FFF;
+          opacity: 0.7;
+        }
+      }
+      .modal-body{
+        text-align: center;
+      }
+      .modal-footer{
+        border-top: 0px;
+        padding: 12px
+      }
+    }
+  }
+  .alert {
+    background-color: #ddd;
+    border: 2px solid #aaa;
+    color: $c-turq;
+    @include glisten();
+
+    button {
+      color: black;
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+  }
+}
+
+.act-response__submit-btn {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.act-response__instructions {
+  color: $c-gray;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.act-response__question {
+  color: $c-gray;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.act-representation,
+.act-response__response {
+  input,
+  textarea {
+    border-color: $c-gray;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    color: $c-turq;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    outline: none;
+    padding: 7px 10px;
+
+    &:focus {
+      border-color: $c-turq;
+    }
+  }
+
+  input.fib-input {
+    margin: 5px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  table {
+    text-align: center;
+
+    th {
+      text-align: center;
+      font-size: 22px;
+    }
+  }
+}
+
+/* Matrix Activity */
+.matrix-table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  width: 100%;
+  line-height: 1;
+
+  tr {
+   height: 60px;
+  }
+
+  .matrix-header,
+  .matrix-cell {
+    border: 3px solid #777;
+    border-radius: 5px;
+    min-height: 80px;
+    width: 100%;
+  }
+
+  .matrix-header {
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    font-weight: bold;
+    justify-content: center;
+  }
+
+  .matrix-cell {
+    align-items: center;
+    background-color: white;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .matrix-cell--selected {
+    background-color: $c-gold;
+  }
+}
+
+.act-response--matrix {
+  .o-btn-clear.matrix-clear {
+
+    width: 95%;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+}
+
+/* Find and Click Activity */
+.fac-selected-word {
+  margin-top: 20px;
+  position:relative;
+
+  input,
+  label {
+    display: inline-block;
+  }
+  .remove-word{
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    color: $c-red-orange;
+  }
+  input {
+    width: 95%;
+    line-height: 1;
+  }
+
+  label {
+    width: 5%;
+  }
+}
+
+/* Multiple Choice Activity */
+.act-response__opt {
+  background-color: white;
+  border-radius: 25px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+
+  label {
+    color: #777;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+}
+
+.act-response__opt--selected {
+  background-color: $c-gold;
+
+  label {
+    color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.12);
+  }
+}
+
+.act-representation--mc {
+  .act-response__opt {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+
+    &:hover {
+      box-shadow: none;
+      cursor: default;
+    }
+  }
+}
+
+
+/* Tree Activity */
+.act-response--tree {
+  .act-response__question{
+    position: relative;
+
+    canvas{
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  .act-review-matrix-btn{
+    background: #bbb url('/media/other/matrix.png') no-repeat 50%;
+    background-size: 80%;
+    color: $c-orange;
+    clear: left;
+    top: 20px;
+    left: -20px;
+    display: block;
+    position: relative;
+
+    &:after {
+      color: $c-orange;
+      content: 'Review your matrix.';
+      left: 78px;
+      line-height: 1.25;
+      text-shadow: none;
+      top: 10px;
+      width: 110px;
+    }
+  }
+
+}
+
+.act-tree {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.act-tree__branch {
+  float: left;
+}
+
+.act-tree__node {
+  float: left;
+  margin-right: 2%;
+  padding: 15px 0;
+  width: 100%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.act-tree__node__inner {
+  border: 3px solid #555;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.act-tree__node__header {
+  background-color: $c-turq;
+  color: $c-black;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 6px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.act-tree__node__inner--root {
+  > .act-tree__node__header {
+    background-color: $c-gold;
+    font-size: 1.4rem;
+    text-transform: none;
+  }
+}
+
+.act-tree__node__inner--question {
+  > .act-tree__node__header {
+    text-align: left;
+  }
+}
+
+.act-tree__node__question {
+  border-top: 3px solid #555;
+
+  textarea {
+    border: none;
+    border-radius: 0;
+    color: $c-black;
+    font-size: 1rem;
+    margin-bottom: -6px; // Chrome hack to fix random margin
+    @include size(100%);
+  }
+}
+
+// Comparison Tree
+.act-tree--comparison {
+  .act-tree__node__inner--l2 {
+    .act-tree__node__header {
+      background-color: #fff;
+    }
+  }
+
+  .act-tree__node__inner--l3 {
+    float: right;
+    width: 90%;
+  }
+}
+
+.matrix-review-modal {
+  .modal-content {
+    padding: 20px;
+  }
+}

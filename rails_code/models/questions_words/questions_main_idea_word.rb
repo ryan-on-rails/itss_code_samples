@@ -1,0 +1,2 @@
+class QuestionsMainIdeaWord < QuestionsWord
+end

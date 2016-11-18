@@ -1,0 +1,2 @@
+class ActivityMainIdeaWord < ActivityWord
+end

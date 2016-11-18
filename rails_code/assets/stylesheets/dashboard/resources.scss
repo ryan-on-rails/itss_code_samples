@@ -1,0 +1,94 @@
+#search-resources {
+  margin-bottom: 50px;
+
+  .form-control {
+    display: inline-block;
+    width: 220px;
+    height: 33px;
+    margin-top: 1px;
+    margin-right: 10px;
+    border: 2px solid $c-turq;
+    border-radius: 6px;
+    box-shadow: 3px 4px darken($c-light-blue, 10%);
+  }
+}
+
+.resource-file-type, .resource-lesson {
+  width: 9em;
+  margin-left: 30px;
+
+  select {
+    width: 10em;
+  }
+}
+
+.itss-dashboard-resources {
+  .downloads-header {
+    color: $c-turq;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .resources {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .resource {
+    position: relative;
+    background: #FFF;
+    width: 70%;
+    padding: 4px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 4px darken($c-light-blue, 10%);
+
+    .file-type, .filename, .download {
+      display: inline-block;
+      padding: 9px;
+    }
+
+    .file-type, .download {
+      color: #FFF;
+      font-size: 15px;
+      text-transform: uppercase;
+      padding-top:    12px;
+      padding-bottom: 12px;
+    }
+
+    .file-type {
+      background: $c-gold;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    .filename {
+      color: $c-turq;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 20px;
+      vertical-align: middle;
+    }
+
+    .download {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background: $c-green;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+
+      a {
+        color: #FFF;
+        &:hover, &:focus {
+          color: #FFF;
+        }
+      }
+
+      .fa {
+        margin-left: 3px;
+        margin-right: 9px;
+      }
+    }
+  }
+}

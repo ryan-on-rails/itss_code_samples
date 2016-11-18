@@ -1,0 +1,817 @@
+/*
+@name admin-panel
+@description Styles for the admin controls.
+-----------------------------------------------------*/
+
+// Activity Chooser
+.admin-controls {
+  left: 250px;
+  position: fixed;
+  top: 0px;
+  width: 500px;
+
+  .dropdown-toggle {
+    color: white;
+    font-size: 1rem;
+
+    &:hover,
+    &:focus {
+      background-color: darken($c-turq, 10%);
+    }
+  }
+
+  .open .dropdown-toggle {
+    color: white;
+    background-color: darken($c-turq, 10%);
+
+    &:hover,
+    &:focus {
+      background-color: darken($c-turq, 10%);
+    }
+  }
+
+  .dropdown-menu {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-top: 0;
+    max-height: 450px;
+    overflow-y: scroll;
+
+    li.active a {
+      background-color:$c-orange;
+    }
+  }
+
+  button.clear-responses {
+    background-color: $c-red-orange;
+    border-color: darken($c-red-orange, 10%);
+    font-size: 0.8rem;
+    margin: 8px 0 0 8px;
+
+    &:hover,
+    &:focus {
+      background-color: darken($c-red-orange, 10%);
+      border-color: darken($c-red-orange, 20%);
+    }
+  }
+}
+.modal{
+    background: rgba(0,0,0,0.5);
+    .modal-warning{
+      .modal-header{
+        background-color: $c-red-orange;
+        border-color: darken($c-red-orange, 10%);
+        color: #FFF;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        .close{
+          color: #FFF;
+          opacity: 0.7;
+        }
+      }
+      .modal-body{
+        text-align: center;
+      }
+      .modal-footer{
+        border-top: 0px;
+        padding: 12px
+      }
+    }
+  }
+.classroom-chooser{
+  position: relative;
+  padding-top: 9px;
+  float: right;
+
+  .btn{
+    display: block;
+    font-size: 16px;
+    color: $c-gold;
+    background-color: rgba(215, 215, 215, 0.2);
+    letter-spacing: 1.1px;
+    top: 0px;
+    padding: 5px 10px;
+    position: relative;
+    // text-transform: uppercase;
+    border-radius: 6px;
+  }
+  & > div.form-group{
+    padding-left: 0px;
+    width: auto;
+  }
+}
+.itss-dashboard{
+  .classroom-chooser{
+    padding-top: 14px;
+    .btn{
+      background-color: $c-gold;
+      color: #FFF;
+      box-shadow: 3px 4px #e2edef;
+      //display: none;
+    }
+  }
+}
+.edit-monologues-container{
+  .monologues-button{
+    float: right;
+  }
+}
+.edit-monologues{
+  .modal-lg{
+    width:75%;
+    .edit-monologue{
+      .btn{
+        margin-right: 10px;
+      }
+      .preview-es-button,
+      .preview-button{
+        padding: 5px 15px;
+        background-color: $c-dark-turq;
+        color: #FFF;
+        font-size: 22px;
+        line-height: 1;
+      }
+      .preview-es-button{
+        background-color: $c-orange;
+      }
+      label{
+        font-weight: normal;
+        font-size: 22px;
+      }
+      .slug-container{
+        margin-top: 10px;
+        label{
+          margin-top: 5px;
+          margin-bottom: 0px;
+          float: left;
+          width: 15%;
+        }
+        input{
+          display: inline-block;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+// Fix for font awesome misaglined right and left icons
+.fa.pull-right { line-height: inherit; }
+.fa.pull-left { line-height: inherit; }
+
+.admin-container {
+  background-color: white;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  .auto-width {
+    display: inline-block;
+    width: auto;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  .overview-panel {
+    font-size: 26.4px;
+  }
+
+  .word-input-separator {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: -25px;
+  }
+
+  .back-arrow {
+    color: $c-gold;
+    margin-right: 10px;
+  }
+
+  .index-indicator {
+    display: inline-block;
+    position: absolute;
+    font-size: 16px;
+    width: 44px;
+    height: 52px;
+    text-align: center;
+    padding-top: 17px;
+    margin: -7px 0 0 -12px;
+    background-color: $c-stormy-blue;
+    color: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .orange-button {
+    width: 135px;
+    height: 34px;
+    border-radius: 6px;
+    background-color: $c-orange;
+    box-shadow: 3px 4px 0 0 rgba(76, 147, 159, 0.17);
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -35px;
+    margin-bottom: 20px;
+  }
+  .page-edit-panel{
+    .orange-button{
+      margin: 6px;
+    }
+  }
+
+  .inner-add-lesson-btn {
+    margin: 10px 0 0 10px;
+  }
+
+  .no-lessons {
+    text-align: center;
+    font-size: 16px;
+  }
+  .lesson-item{
+    padding: 10px 15px 5px;
+    a.lesson-link{
+      float: left;
+      width: 93%;
+      text-align: left;
+    }
+    .lesson-num-status-indicator {
+      display: block;
+      position: relative;
+      float: left;
+      font-size: 16px;
+      width: auto;
+      height: 45px;
+      text-align: center;
+      padding: 0px;
+      line-height: 45px;
+      min-width: 40px;
+      margin: -7px 0 0 -12px;
+      background-color: $c-dark-turq;
+      color: white;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      &.unpublished{
+        background-color: $c-orange;
+      }
+    }
+  }
+
+  .course-name {
+    padding-left: 57px;
+    display: inline-block;
+    color: $c-stormy-blue;
+    font-weight: bold;
+  }
+  .article-edit-panel{
+    .article-title {
+      padding-left: 10px;
+      display: inline-block;
+      color: $c-stormy-blue;
+      font-weight: bold;
+    }
+    .article-struct-indicator {
+      display: block;
+      position: relative;
+      float: left;
+      font-size: 16px;
+      width: auto;
+      height: 52px;
+      text-align: center;
+      padding: 17px 10px 15px;
+      margin: -7px 0 0 -12px;
+      background-color: $c-stormy-blue;
+      color: white;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
+  .article-list{
+    border-color: #ddd;
+
+    .article-item-container{
+      color: #333333;
+      background-color: #f5f5f5;
+      border-color: #ddd;
+      padding: 5px;
+      border-bottom: 1px solid transparent;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+      margin-bottom: 10px;
+
+      .article-link{
+        .article-struct-indicator{
+          display: block;
+          position: relative;
+          float: left;
+          font-size: 16px;
+          width: auto;
+          height: 45px;
+          text-align: center;
+          padding: 13px 10px 7px;
+          /*margin: -7px 0 0 -12px;*/
+          background-color: $c-stormy-blue;
+          color: white;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+        .heading{
+          padding-left: 10px;
+          display: inline-block;
+          color: $c-stormy-blue;
+          font-weight: bold;
+          float: left;
+          margin: 15px 10px 5px;
+        }
+      }
+    }
+  }
+  .article-edit-panel{
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 25px;
+    .article-container{
+      margin-bottom: 20px;
+      border: 0px solid #ddd;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      padding-top: 0px;
+
+      .article-edit-header{
+        background-color: #4d8d92;
+        color: #FFF;
+        padding-top: 15px;
+
+        position: absolute;
+        box-shadow: 1px 5px 1px 0 rgba(77, 141, 146, 0.2);
+        top: -50px;
+        width: 100%;
+        left: 0px;
+        .admin-location{
+          line-height: 1.5;
+          font-size: 24px;
+        }
+        .article-page-header{
+          font-size: 28px;
+        }
+        .edit-buttons{
+          margin-top: -5px;
+          .edit-button-container{
+            display: inline-block;
+            .btn-circle{
+              border-radius: 60%;
+              min-width: 40px;
+              min-height: 40px;
+              margin: 0px 5px;
+
+              &.add-language{
+                background-color: #ecb522;
+                border-color: darken(#ecb522, 10);
+                &:hover{
+                  background-color: darken(#ecb522, 10);
+                  border-color: darken(#ecb522, 20);
+                }
+              }
+              &.save-article{
+                background-color: #70af55;
+                border-color: darken(#70af55, 10);
+                &:hover{
+                  background-color: darken(#70af55, 10);
+                  border-color: darken(#70af55, 20);
+                }
+              }
+              &:focus{
+                outline: none;
+              }
+            }
+            span{
+              clear: left;
+              font-size: 12px;
+              width: 100%;
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+        .structure-select{
+          width: 171px;
+          height: 35px;
+          border-radius: 6px;
+          color: #4d8d92;
+          background-color: $c-pale-grey;
+          box-shadow: 4px 4px 0 0 #b8d3d7;
+          border: solid 2px #4d8d92;
+
+          &:hover{
+            cursor: pointer;
+            background-color: darken($c-pale-grey, 10);
+          }
+        }
+      }
+
+      .article-edit-body {
+        .narrow {
+          width: 48%;
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+
+          &.collapsed {
+            width: 0%
+          }
+
+          &.expanded {
+            width: 95%
+          }
+        }
+      }
+
+      .separation-container {
+        display: inline-block;
+        float: left;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+
+        .separator-line {
+          margin: 12px 0;
+          max-height: 800px;
+          vertical-align: top;
+        }
+
+        .collapse-arrow {
+          color: #ecb522;
+          margin: 0 7px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .edit-button {
+    display: inline-block;
+    color: white;
+    background-color: $c-gold;
+    float: right;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    width: 81px;
+    height: 40px;
+  }
+
+  .delete-button {
+    background-color: transparent;
+    color: red;
+    float: right;
+    margin-left: 17px;
+    cursor: pointer;
+  }
+  .edit-lesson-button {
+    background-color: transparent;
+    color: $c-gold;
+    float: right;
+    margin-left: 17px;
+    cursor: pointer;
+  }
+
+  .delete-button.smaller {
+    font-size: 20px;
+    padding-top: 10px;
+    margin-left: 5px;
+  }
+
+  .add-answer-button {
+    font-size: 17px;
+    color: $c-green;
+    padding-top: 13px;
+    cursor: pointer;
+    float: right;
+  }
+
+  .admin-secondary-nav-bar {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 100%;
+    background-color: black;
+    min-height: 50px;
+
+    .admin-location {
+      color: white;
+      margin: 12px 45px;
+      display: inline;
+      position: absolute;
+    }
+
+    .header-btn {
+      display: inline;
+      margin: 8px 0 0 0;
+      font-size: 16px;
+      margin-right: 45px;
+      color: $c-gold;
+      background-color: rgba(215,215,215,0.20);
+      letter-spacing: 1.1px;
+    }
+
+    .edit-lesson {
+      margin-right: 10px;
+      form.edit-lesson-form{
+        .col-md-12{
+          .col-md-6{
+            &:first-child{
+              padding-left: 0px;
+            }
+            &:last-child{
+              padding-right: 0px;
+            }
+          }
+        }
+      }
+    }
+
+    .overview-md {
+      width: 165px;
+    }
+    .overview-lrg {
+      width: 270px;
+    }
+  }
+
+  .admin-container-left {
+    background-color: $c-light-blue;
+    color: $c-dark-blue;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    padding: 0px 45px;
+    margin-top: 30px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    .heading {
+      margin-left: 0px;
+      font-size: 16px;
+      color: $c-stormy-blue;
+    }
+
+    .fa-info-circle {
+      font-size: 17px;
+      margin-left: 10px;
+    }
+
+  }
+
+  &.toggled .admin-container-left {
+    position: absolute;
+    width: 80%;
+  }
+
+  .admin-container-right {
+    background-color: white;
+    color: $c-dark-blue;
+    min-height: 100vh;
+    width: 0;
+    margin-top: 30px;
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    .cancel-button {
+      margin-top: -5px;
+      color: red;
+      float: left;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .course-edit {
+      opacity: 0;
+    }
+
+    .heading {
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      color: $c-stormy-blue;
+    }
+
+  }
+
+  &.toggled .admin-container-right {
+    width: 20%;
+    padding: 0px 14px;
+  }
+
+  .save-button {
+    width: 100%;
+    background-color: $c-orange;
+    color: white;
+    box-shadow: 3px 4px 0 0 #e2edef;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .save-button-right {
+    margin: 15px 0;
+    background-color: $c-orange;
+    color: white;
+    float: right;
+    box-shadow: 3px 4px 0 0 #e2edef;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .add-field-button {
+    background-color: $c-green;
+    color: white;
+    box-shadow: 3px 4px 0 0 #e2edef;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .itss-form {
+    margin-top: 20px;
+    display: inline-block;
+    label {
+      color: $c-stormy-blue;
+      font-weight: normal;
+      font-size: 16px;
+
+      input:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .page-elements, .page-activities {
+    > div {
+      border: 1px solid $c-stormy-blue;
+      border-radius: 5px;
+      padding: 10px 20px;
+      background-color: #e2edef;
+      margin-bottom: 15px;
+    }
+  }
+  .media_element{
+    img{
+      max-width: 100%;
+      max-height: 300px;
+      margin: auto;
+      display: block;
+      clear: both;
+    }
+    label{
+      width: 100%;
+      text-align: center;
+      input{
+        display: none;
+      }
+      span{
+        padding: 10px;
+        cursor: pointer;
+        display: block;
+      }
+    }
+  }
+
+  .content-textarea {
+    height: 150px;
+  }
+
+
+  .breadcrumb-link{
+    .heading{
+      text-decoration: underline;
+    }
+  }
+  .breadcrumb-arrow{
+    padding: 22px 10px 0px;
+    font-size: 12px;
+    color: #4c949f;
+    line-height: 1;
+  }
+
+  .content_element-label,
+  .activity-label{
+    color: #4c949f;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: bold;
+  }
+  //Matrix activity
+  .matrix-activity-edit{
+    td{
+      padding: 0px 5px;
+      position: relative;
+
+      .matrix_header{
+        background-color: #DDD;
+      }
+
+      input{
+        margin-bottom: 20px;
+      }
+      .populate-box{
+        position: absolute;
+        bottom: -2px;
+        left: 25%;
+        width: 50%;
+        line-height: 1;
+        margin: 0px;
+        input{
+          margin-bottom: 0px;
+        }
+      }
+    }
+    th{
+      .matrix_header{
+        background-color: #DDD;
+      }
+    }
+  }
+
+  //Composition Activity
+  .composition-activity-edit{
+    .delete-button{
+      margin-left: 0px;
+    }
+    & > .delete-button{
+      margin-left: 10px;
+    }
+    .add-question{
+      color: $c-orange;
+      background-color: transparent;
+    }
+  }
+
+  // Fill in the Blank Activity
+  .answer-word {
+    border: 1px solid $c-stormy-blue;
+    border-radius: 5px;
+  }
+  .lesson-edit {
+    margin-right: 10px;
+    form.lesson-edit-form{
+      .col-md-12{
+        padding: 0px 5px;
+        .col-md-6{
+          &:first-child{
+            padding-left: 0px;
+          }
+          &:last-child{
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+    .attachment-button{
+      float: right;
+    }
+  }
+
+}
+.edit-lesson_attachments{
+  .edit-lesson_attachment{
+    .download-link{
+      .file_name{
+        overflow-wrap: break-word;
+      }
+      *{
+        max-width: 100%;
+        margin: auto;
+        display: block;
+      }
+      i{
+        font-size: 64px;
+        text-align: center;
+      }
+      img.attachment{
+        max-width: 100%;
+      }
+    }
+  }
+  input[type="file"]{
+    padding: 5px;
+    line-height: 0;
+  }
+}

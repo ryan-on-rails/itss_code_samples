@@ -1,0 +1,37 @@
+/*
+@name variables
+@description Global SASS variables and imports.
+-----------------------------------------------------*/
+
+// Colors
+$c-red-orange: rgb(186, 100, 39);
+$c-orange: rgb(209, 101, 39);
+$c-gold: #E9B11A;
+$c-turq: rgb(103, 147, 157);
+$c-dark-turq: rgb(33, 88, 97);
+$c-light-blue: rgb(226, 237, 239);
+$c-dark-blue: rgb(24, 46, 68);
+$c-light-green: rgb(160, 177, 50);
+$c-stormy-blue: rgb(76, 148, 159);
+$c-green: rgb(123, 198, 91);
+$c-blackish: rgb(45, 45, 45);
+$c-black: #000;
+$c-white: #FFF;
+$c-gray: rgb(161, 161, 161);
+$c-mid-gray: #535353;
+$c-dark-gray: #595959;
+$c-pale-grey: #e2edef;
+$c-pale-yellow: #fff886;
+$c-link-blue: #4f8e93;
+
+// Font families
+$ff-sans-serif: 'brandon-grotesque', sans-serif;
+
+// Z-indexes
+$z-max: 9999999;
+
+// Bootstrap
+$navbar-height: 50px;
+$navbar-inverse-bg: $c-turq;
+$navbar-inverse-link-color: white;
+$navbar-border-radius: 0;

@@ -1,0 +1,8 @@
+/*
+@name mixins
+@description SASS mixins. (Check Bourbon first! http://bourbon.io/docs/)
+-----------------------------------------------------*/
+
+@mixin glisten() {
+  text-shadow: 0 -1px 0 rgba(255,255,255,0.3);
+}

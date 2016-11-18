@@ -1,0 +1,198 @@
+.report-select-group {
+  display: inline-block;
+}
+.report-select-label {
+  color: $c-turq;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-right: 10px;
+}
+.report-select {
+  color: $c-turq;
+  font-size: 0.9em;
+  font-weight: bold;
+  width: 14em;
+  height: 34px;
+  border: 2px solid $c-turq;
+  border-radius: 6px;
+  background: #FFF;
+  vertical-align: bottom;
+  margin-right: 20px;
+
+  select {
+    width: 15em;
+    height: 34px;
+    padding: 5px 15px;
+  }
+}
+.no-report-data
+{
+  text-align: center;
+  background: white;
+  margin: 25px 25%;
+  padding: 25px;                
+}
+.report-format-select {
+  width: 8em;
+}
+
+// report table
+.itss-dashboard-report {
+  font-size: 1.1rem;
+  margin: auto;
+  margin-top: 50px;
+
+  @media only print {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  header {
+  }
+}
+
+.report-header {
+  // the Report component is a child of Reports so the header is
+  // within the dashboard-body and needs to be offset for print
+  @media only print {
+    margin-top: -50px;
+    margin-left: -30px;
+    margin-bottom: 20px;
+  }
+
+  .classroom-status-name {
+    @media only print {
+      float: none;
+      padding: 0;
+    }
+  }
+}
+
+.report-row {
+  background: #FFF;
+  margin-bottom: 3px;
+
+  @media only print {
+    &:first-child {
+      border-top: 1px dashed #000;
+    }
+    border-bottom: 1px dashed #000;
+    margin-bottom: 0;
+  }
+}
+
+.report-row-data {
+  padding: 0 1.5em 1em;
+
+  .report-row-section {
+    padding: 0 1.5em;
+
+    .leading-row {
+      list-style: none;
+      padding-left: 0;
+      margin-left: -1.5em;
+      margin-bottom: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 1.2em;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .questions {
+    .question-id {
+      width: 13em;
+    }
+    .question-attempts {
+      width: 3em;
+    }
+  }
+
+  .response {
+    padding: 0 1.5em 0.5em;
+    margin-top: 0.5em;
+
+    @media only print {
+      padding-bottom: 0;
+      margin-top: 2px;
+    }
+
+    .response-header {
+      color: #FFF;
+      background: $c-dark-gray;
+      padding: 2px 1.5em;
+      margin: 0 -1.5em;
+
+      @media only print {
+        padding: 0;
+      }
+
+      .report-turq {
+        color: lighten($c-turq, 20%);
+      }
+    }
+    .response-answer {
+      min-height: 1.6em;
+      padding: 2px 0.5em;
+      margin: 0 -0.5em;
+      border-bottom: 1px solid $c-turq;
+
+      @media only print {
+        display: inline-block;
+
+        min-height: 1.2em;
+        line-height: 1.2;
+        padding: 0 0.5em;
+        margin-right: 0.5em;
+        border-right: 1px solid #000;
+        border-bottom: none;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  .response.model-response {
+    background: lighten($c-gold, 25%);
+
+    .response-header {
+      background: darken($c-gold, 20%);
+    }
+    .response-answer {
+      border-bottom: 1px solid darken($c-gold, 20%);
+
+      @media only print {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.report-student {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    padding: 8px 10px;
+
+    @media only print {
+      padding: 10px 8px;
+    }
+  }
+}
+
+// hide profiler while printing reports
+.profiler-results {
+  @media only print {
+    display: none;
+  }
+}

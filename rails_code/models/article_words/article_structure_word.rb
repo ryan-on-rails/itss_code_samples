@@ -1,0 +1,2 @@
+class ArticleStructureWord < ArticleWord
+end

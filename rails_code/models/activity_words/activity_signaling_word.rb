@@ -1,0 +1,2 @@
+class ActivitySignalingWord < ActivityWord
+end

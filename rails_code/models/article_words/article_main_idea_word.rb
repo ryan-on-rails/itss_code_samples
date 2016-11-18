@@ -1,0 +1,2 @@
+class ArticleMainIdeaWord < ArticleWord
+end

@@ -1,0 +1,2 @@
+class ActivityStructureWord < ActivityWord
+end
